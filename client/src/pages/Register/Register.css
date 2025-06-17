@@ -1,0 +1,227 @@
+.r-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f4f4f4;
+}
+
+
+.r-header {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.r-logo-img {
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+}
+
+.r-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20x;
+
+}
+
+
+.r-card {
+    display: flex;
+    background: white;
+    width: 100%;
+    max-width: 1000px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+
+.r-left-section {
+    flex: 1;
+    background-color: #4b0082;
+    color: white;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 300px;
+}
+
+.r-dashboard-image {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+}
+
+.r-description h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.r-description p {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.r-right-section {
+    flex: 1;
+    padding: 40px 30px;
+    min-width: 300px;
+}
+
+.r-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.r-form label {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #444;
+}
+
+.r-form input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-top: 6px;
+    box-sizing: border-box;
+}
+
+.r-error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+.r-register-button {
+    width: 140px;
+    padding: 12px;
+    background-color: #4b0082;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.r-register-button:hover {
+    background-color: #37005f;
+}
+
+
+.r-login-link {
+    margin-top: 16px;
+    font-size: 15px;
+
+}
+
+.r-login-link a {
+    color: #4b0082;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.r-login-link a:hover {
+    text-decoration: underline;
+}
+
+
+.r-password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.r-password-wrapper input {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.r-eye-icon {
+    position: absolute;
+    right: 10px;
+    color: #4b0082;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Responsive................................... */
+
+
+@media (max-width: 768px) {
+    .r-card {
+        flex-direction: column;
+        width: 100%;
+        border-radius: 30px;
+        box-shadow: none;
+        padding: 5px;
+    }
+
+    .r-left-section,
+    .r-right-section {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .r-dashboard-image {
+        width: 100%;
+        max-height: 220px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+
+    .r-description h3 {
+        font-size: 16px;
+        line-height: 1.4;
+        margin-bottom: 8px;
+
+    }
+
+    .r-description p {
+        font-size: 13px;
+        line-height: 1.5;
+
+    }
+
+    .r-form {
+        width: 100%;
+    }
+
+    .r-form input {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .r-title {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .r-login-link {
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .r-password-wrapper {
+        width: 100%;
+    }
+}

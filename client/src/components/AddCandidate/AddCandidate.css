@@ -1,0 +1,121 @@
+.add-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.add-modal {
+    background: #fff;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.add-modal-header {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #4b0082;
+    color: #fff;
+}
+
+.close-btn {
+    position: absolute;
+    right: 16px;
+    top: 45%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+.add-modal-body {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+}
+
+.input-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.input-field {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field label {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+.input-field input {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+
+}
+
+.input-field input:focus {
+    border: 1px solid #4b0082;
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+.save-btn {
+    display: block;
+    margin: 12px auto 0 auto;
+    padding: 12px 40px;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+}
+
+.save-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+@media (max-width: 600px) {
+    .input-row {
+        flex-direction: column;
+    }
+
+    .add-modal {
+        width: 95%;
+        max-height: 95vh;
+    }
+}

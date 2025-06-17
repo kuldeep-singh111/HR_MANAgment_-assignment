@@ -1,0 +1,164 @@
+.e-wrapper {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.e-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.e-title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.e-search-filter {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.e-select {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.e-search-box {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+    border-radius: 20px;
+}
+
+.e-search-icon {
+    margin-right: 6px;
+    color: #888;
+}
+
+.e-search-input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+
+.e-table-container {
+    overflow-x: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 4px 5px 10px 0px rgb(133, 130, 130);
+    height: 500px;
+    scrollbar-width: auto;
+    scrollbar-color: #999 #eee;
+}
+
+.e-table-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.e-table-container::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 6px;
+}
+
+.e-table-container::-webkit-scrollbar-track {
+    background: #eee;
+}
+
+.e-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px;
+}
+
+.e-table thead {
+    background-color: #4b0082;
+    color: white;
+    text-align: left;
+}
+
+.e-table th,
+.e-table td {
+    padding: 12px 16px;
+    /* border-bottom: 1px solid #ddd; */
+}
+
+.e-actions {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.e-action-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.e-action-icon {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.e-action-menu {
+    position: absolute;
+    right: 0;
+    top: 24px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+}
+
+.e-action-menu button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+    color: #333;
+}
+
+.e-action-menu button:hover {
+    background-color: #f3f3f3;
+}
+
+@media (max-width: 950px) {
+    .e-table-container {
+        overflow-x: auto;
+    }
+
+    .e-table {
+        min-width: 900px;
+        font-size: 12px;
+    }
+
+    .e-table th,
+    .e-table td {
+        padding: 10px 12px;
+    }
+
+    .e-search-input {
+        font-size: 13px;
+    }
+
+    .e-select {
+        font-size: 13px;
+    }
+
+    .e-action-menu button {
+        font-size: 13px;
+    }
+}
