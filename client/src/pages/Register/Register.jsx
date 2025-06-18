@@ -55,7 +55,8 @@ const Registration = () => {
         e.preventDefault();
         if (validate()) {
             try {
-                const res = await axios.post("http://localhost:9000/register", formData,
+                // const res = await axios.post("http://localhost:9000/register", formData,
+                const res = await axios.post("https://hr-managment-assignment.onrender.com/register", formData,
                     {
                         withCredentials: true,
                         headers: {

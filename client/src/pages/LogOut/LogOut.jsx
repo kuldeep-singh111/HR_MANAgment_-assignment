@@ -8,7 +8,8 @@ const LogOut = ({ onCancel }) => {
 
     const handleLogout = async () => {
         try {
-            await axios.post("http://localhost:9000/logout", {}, { withCredentials: true });
+            // await axios.post("http://localhost:9000/logout", {}, { withCredentials: true });
+            await axios.post("https://hr-managment-assignment.onrender.com/logout", {}, { withCredentials: true });
             navigate("/login");
         } catch (error) {
             console.error("Logout failed:", error);

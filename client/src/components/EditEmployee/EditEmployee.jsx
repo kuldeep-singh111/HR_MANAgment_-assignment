@@ -43,7 +43,8 @@ const EditEmployee = ({ employee, onClose, onSave }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await fetch(`http://localhost:9000/editemployee/${employee._id}`, {
+            // const res = await fetch(`http://localhost:9000/editemployee/${employee._id}`, {
+            const res = await fetch(`https://hr-managment-assignment.onrender.com/editemployee/${employee._id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -57,8 +58,8 @@ const EditEmployee = ({ employee, onClose, onSave }) => {
             }
 
             const updatedEmployee = await res.json();
-            onSave(updatedEmployee); // ✅ Callback to refresh list
-            onClose(); // ✅ Close modal
+            onSave(updatedEmployee);
+            onClose();
         } catch (error) {
             console.error("Error updating employee:", error);
         }

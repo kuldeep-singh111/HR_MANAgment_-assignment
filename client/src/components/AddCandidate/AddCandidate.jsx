@@ -55,7 +55,11 @@ const AddCandidateModal = ({ onClose }) => {
                 resumeUrl: resumeURL
             };
 
-            await axios.post("http://localhost:9000/addcandidates", candidateData, {
+            // await axios.post("http://localhost:9000/addcandidates", candidateData, {
+            //     withCredentials: true
+            // });
+
+            await axios.post("https://hr-managment-assignment.onrender.com/addcandidates", candidateData, {
                 withCredentials: true
             });
 

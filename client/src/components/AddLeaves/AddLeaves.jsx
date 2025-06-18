@@ -15,7 +15,8 @@ const AddLeave = ({ onClose, onSave }) => {
     useEffect(() => {
         const fetchEmployees = async () => {
             try {
-                const res = await axios.get('http://localhost:9000/present-employees', { withCredentials: true });
+                // const res = await axios.get('http://localhost:9000/present-employees', { withCredentials: true });
+                const res = await axios.get('https://hr-managment-assignment.onrender.com/present-employees', { withCredentials: true });
                 setEmployees(res.data);
             } catch (err) {
                 console.error('Failed to fetch present employees', err);
@@ -58,7 +59,8 @@ const AddLeave = ({ onClose, onSave }) => {
 
 
         try {
-            await axios.post('http://localhost:9000/leaves', payload, { withCredentials: true });
+            // await axios.post('http://localhost:9000/leaves', payload, { withCredentials: true });
+            await axios.post('https://hr-managment-assignment.onrender.com/leaves', payload, { withCredentials: true });
             onSave();
         } catch (err) {
             console.error("Failed to save leave", err);

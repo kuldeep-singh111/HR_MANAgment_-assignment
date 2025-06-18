@@ -27,9 +27,14 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:9000/login", formData, {
+            // const response = await axios.post("http://localhost:9000/login", formData, {
+            //     withCredentials: true
+            // })
+
+            const response = await axios.post("https://hr-managment-assignment.onrender.com/login", formData, {
                 withCredentials: true
             })
+
 
             const user = response.data.user;
 

@@ -11,10 +11,12 @@ const Attendance = () => {
 
     const fetchEmployees = async () => {
         try {
-            const res = await axios.get("http://localhost:9000/employees", { withCredentials: true });
+            // const res = await axios.get("http://localhost:9000/employees", { withCredentials: true });
+            const res = await axios.get("https://hr-managment-assignment.onrender.com/employees", { withCredentials: true });
             const employeesData = res.data;
 
-            const attendanceRes = await axios.get("http://localhost:9000/attendance/today", { withCredentials: true });
+            // const attendanceRes = await axios.get("http://localhost:9000/attendance/today", { withCredentials: true });
+            const attendanceRes = await axios.get("https://hr-managment-assignment.onrender.com/attendance/today", { withCredentials: true });
 
             const attendanceMap = {};
             attendanceRes.data.forEach(att => {
@@ -38,7 +40,8 @@ const Attendance = () => {
 
     const handleStatusChange = async (id, newStatus) => {
         try {
-            await axios.put(`http://localhost:9000/attendance/${id}`, { status: newStatus }, { withCredentials: true });
+            // await axios.put(`http://localhost:9000/attendance/${id}`, { status: newStatus }, { withCredentials: true });
+            await axios.put(`https://hr-managment-assignment.onrender.com/attendance/${id}`, { status: newStatus }, { withCredentials: true });
             fetchEmployees();
         } catch (err) {
             console.error("Failed to update status", err);

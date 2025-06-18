@@ -71,8 +71,11 @@ const Candidates = () => {
         if (value === "Selected") {
             const user = JSON.parse(localStorage.getItem("user"));
             try {
+                // await axios.post(
+                //     "http://localhost:9000/addemployee",
+                //     {
                 await axios.post(
-                    "http://localhost:9000/addemployee",
+                    "https://hr-managment-assignment.onrender.com/addemployee",
                     {
                         candidateId: id,
                         userId: user._id,

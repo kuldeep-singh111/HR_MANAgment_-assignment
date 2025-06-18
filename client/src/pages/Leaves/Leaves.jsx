@@ -16,7 +16,8 @@ export default function Leaves() {
 
     const fetchLeaves = async () => {
         try {
-            const res = await axios.get("http://localhost:9000/getleaves", { withCredentials: true });
+            // const res = await axios.get("http://localhost:9000/getleaves", { withCredentials: true });
+            const res = await axios.get("https://hr-managment-assignment.onrender.com/getleaves", { withCredentials: true });
             setLeaves(res.data);
         } catch (err) {
             console.error("Failed to fetch leaves", err);
@@ -29,7 +30,8 @@ export default function Leaves() {
 
     const handleStatusChange = async (id, newStatus) => {
         try {
-            await axios.put(`http://localhost:9000/leaves/${id}/status`, { status: newStatus }, { withCredentials: true });
+            // await axios.put(`http://localhost:9000/leaves/${id}/status`, { status: newStatus }, { withCredentials: true });
+            await axios.put(`https://hr-managment-assignment.onrender.com/leaves/${id}/status`, { status: newStatus }, { withCredentials: true });
             setLeaves(prev => prev.map(l => l._id === id ? { ...l, status: newStatus } : l));
         } catch (err) {
             console.error("Failed to update status", err);

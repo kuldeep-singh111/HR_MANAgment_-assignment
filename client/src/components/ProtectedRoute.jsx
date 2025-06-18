@@ -10,7 +10,8 @@ const ProtectedRoute = ({ children }) => {
         const checkAuth = async () => {
             try {
 
-                await axios.get("http://localhost:9000/auth/check", {
+                // await axios.get("http://localhost:9000/auth/check", {
+                await axios.get("https://hr-managment-assignment.onrender.com/auth/check", {
                     withCredentials: true,
                 });
                 setIsAuthenticated(true);

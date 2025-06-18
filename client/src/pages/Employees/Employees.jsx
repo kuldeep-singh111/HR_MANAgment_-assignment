@@ -22,7 +22,11 @@ const Employees = () => {
                 return;
             }
 
-            const res = await axios.get(`http://localhost:9000/getemployees/${user._id}`, {
+            // const res = await axios.get(`http://localhost:9000/getemployees/${user._id}`, {
+            //     withCredentials: true,
+            // });
+
+            const res = await axios.get(`https://hr-managment-assignment.onrender.com/getemployees/${user._id}`, {
                 withCredentials: true,
             });
             setEmployees(res.data);
@@ -37,7 +41,11 @@ const Employees = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:9000/deleteemployee/${id}`, {
+            // await axios.delete(`http://localhost:9000/deleteemployee/${id}`, {
+            //     withCredentials: true,
+            // });
+
+            await axios.delete(`https://hr-managment-assignment.onrender.com/deleteemployee/${id}`, {
                 withCredentials: true,
             });
             setEmployees((prev) => prev.filter((emp) => emp._id !== id));
