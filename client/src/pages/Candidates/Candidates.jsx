@@ -20,7 +20,10 @@ const Candidates = () => {
 
     const fetchCandidates = async () => {
         try {
-            const res = await axios.get("http://localhost:9000/getcandidates", {
+            // const res = await axios.get("http://localhost:9000/getcandidates", {
+            //     withCredentials: true,
+            // });
+            const res = await axios.get("https://hr-managment-assignment.onrender.com/getcandidates", {
                 withCredentials: true,
             });
             setCandidates(res.data);
@@ -44,7 +47,10 @@ const Candidates = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:9000/deletecandidate/${id}`, {
+            // await axios.delete(`http://localhost:9000/deletecandidate/${id}`, {
+            //     withCredentials: true,
+            // });
+            await axios.delete(`https://hr-managment-assignment.onrender.com/deletecandidate/${id}`, {
                 withCredentials: true,
             });
             setCandidates((prev) => prev.filter((c) => c._id !== id));
