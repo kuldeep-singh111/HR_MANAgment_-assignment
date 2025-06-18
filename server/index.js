@@ -10,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT;
 
 app.use(cors({
-    origin: "https://hr-managment-rho.vercel.app",
+    origin: "https://magenta-tapioca-8877c7.netlify.app",
     credentials: true,
 }))
 //" http://localhost:5173",
