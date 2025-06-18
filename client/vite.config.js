@@ -8,6 +8,6 @@ export default defineConfig({
     historyApiFallback: true,
   },
   build: {
-    outDir: "build",
+    outDir: "dist",
   }
 });
